@@ -17,6 +17,7 @@ set -o vi
 unset MAILCHECK
 
 # colors
+export EDITOR="mvim"
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
 
@@ -29,6 +30,11 @@ alias gl='git log --pretty=oneline --abbrev-commit'
 alias du1='du -h --max-depth=1'
 alias fn='find . -name'
 alias hi='history | tail -20'
+
+# utilities
+alias moneytrackr='rake -f $HOME/Coding/ruby/rake_scripts/moneytrackr.rb'
+alias favbuster="cd $HOME/Coding/ruby/favbuster; ruby favbuster.rb; cd -"
+alias wordpress-backup="cd Coding/ruby/wordpress-backup; thor backup:all; cd -"
 
 # -----------------------------------------------------------
 # GIT PROMPT [credits: http://gist.github.com/31934]
