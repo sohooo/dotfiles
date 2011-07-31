@@ -1,0 +1,35 @@
+[user]
+  name = Sven Sporer
+  email = sohooo@intothespirit.com
+
+[alias]
+  co = checkout
+  br = branch
+  st = status
+  lg = log --graph --pretty=oneline --abbrev-commit --date=relative
+  graph = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+
+[color]
+  ui = true
+  pager = true
+  log = true
+  diff = auto
+  status = auto
+  branch = auto
+
+[core]
+  excludesfile = ~/.gitignore
+  editor = vi
+  pager = less -FXRS
+
+[apply]
+  whitespace = nowarn
+
+[help]
+  autocorrect = 1
+
+[branch]
+  autosetupmerge = true
+
+[push]
+  default = tracking
