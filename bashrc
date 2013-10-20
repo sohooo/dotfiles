@@ -16,6 +16,10 @@ set -o vi
 # disable that mail sh*t
 unset MAILCHECK
 
+# logfiles
+export LOGS=$HOME/Logs
+export SITES_LOG=$LOGS/sites.log
+
 # colors
 export EDITOR="mvim"
 export CLICOLOR=1
@@ -32,8 +36,6 @@ alias fn='find . -name'
 alias hi='history | tail -20'
 
 # utilities
-alias moneytrackr='rake -f $HOME/Coding/ruby/rake_scripts/moneytrackr.rb'
-alias favbuster="cd $HOME/Coding/ruby/favbuster; ruby favbuster.rb; cd -"
 alias wordpress-backup="cd Coding/ruby/wordpress-backup; thor backup:all; cd -"
 
 # -----------------------------------------------------------
@@ -100,5 +102,7 @@ function prompt_func() {
 
 PROMPT_COMMAND=prompt_func
 
-# This loads RVM into a shell session.
-[[ -s "/Users/soho/.rvm/scripts/rvm" ]] && source "/Users/soho/.rvm/scripts/rvm"
+# This loads rbenv into a shell session.
+export RBENV_ROOT=/usr/local/var/rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+

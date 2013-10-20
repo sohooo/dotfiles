@@ -1,3 +1,0 @@
-require 'redgreen/autotest'
-require 'autotest/timestamp'
-require 'autotest/restart'
